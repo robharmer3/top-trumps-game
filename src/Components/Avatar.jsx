@@ -1,25 +1,16 @@
-import { useContext, useState } from "react";
-import Category from "./Catergory";
-import Avatar from "./Avatar";
+import { useContext } from "react";
 import { UserProvider } from "../Context/User";
 
-export default function Home() {
-  const [category, setCategory] = useState("");
-
-  const { user, setUser } = useContext(UserProvider);
-  console.log(user);
-
+export default function Avatar() {
+  const { user } = useContext(UserProvider);
   function handleAvatar(event) {
     event.preventDefault();
-    // setUser(event.target.value);
+    setUser(event.target.value);
     console.log(user);
   }
 
   return (
     <>
-      <h1>Rob's Version of Top Trumps</h1>
-      <h2>State you name</h2>
-      <input type="text" />
       <form>
         <label htmlFor="default">
           <h2>Pick your Avater</h2>
@@ -31,8 +22,6 @@ export default function Home() {
           <option value="avatar 3">Parrot</option>
         </select>
       </form>
-      <Category setCategory={setCategory} />
-      <button>Play!</button>
     </>
   );
 }

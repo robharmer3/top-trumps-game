@@ -5,15 +5,18 @@ import { Routes, Route } from "react-router-dom";
 import "./App.css";
 import Home from "./Components/Home";
 import Deal from "./Components/Deal";
+import { UserProvider } from "./Context/User";
 
 function App() {
   return (
     <>
-      <h1>Witty Top Trumps Name</h1>
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/deal" element={<Deal />} />
-      </Routes>
+      <UserProvider>
+        <h1>Witty Top Trumps Name</h1>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/deal" element={<Deal />} />
+        </Routes>
+      </UserProvider>
     </>
   );
 }
