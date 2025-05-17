@@ -1,4 +1,9 @@
-export default function Category(setCategory) {
+import { useContext } from "react";
+import { CategoryContext } from "../Context/Category";
+
+export default function Category() {
+  const { category, setCategory } = useContext(CategoryContext);
+
   function handleCategory(event) {
     event.preventDefault();
     setCategory(event.target.value);

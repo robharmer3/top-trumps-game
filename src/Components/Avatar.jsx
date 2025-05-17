@@ -1,12 +1,12 @@
 import { useContext } from "react";
-import { UserProvider } from "../Context/User";
+import { AvatarContext } from "../Context/Avatar";
 
 export default function Avatar() {
-  const { user } = useContext(UserProvider);
+  const { avatar, setAvatar } = useContext(AvatarContext);
+
   function handleAvatar(event) {
     event.preventDefault();
-    setUser(event.target.value);
-    console.log(user);
+    setAvatar(event.target.value);
   }
 
   return (
@@ -17,9 +17,9 @@ export default function Avatar() {
         </label>
         <select onChange={handleAvatar} name="category-dropdown" id="category">
           <option value="">--Please Select--</option>
-          <option value="avatar 1">Cat</option>
-          <option value="avatar 2">Dog</option>
-          <option value="avatar 3">Parrot</option>
+          <option value="avatar-cat">Cat</option>
+          <option value="avatar-dog">Dog</option>
+          <option value="avatar-parrot">Parrot</option>
         </select>
       </form>
     </>
