@@ -9,15 +9,15 @@ import { NameProvider } from "./Context/Name.jsx";
 import { CategoryProvider } from "./Context/Category.jsx";
 
 createRoot(document.getElementById("root")).render(
-  <StrictMode>
-    <BrowserRouter>
-      <AvatarProvider>
-        <NameProvider>
-          <CategoryProvider>
-            <App />
-          </CategoryProvider>
-        </NameProvider>
-      </AvatarProvider>
-    </BrowserRouter>
-  </StrictMode>
+  // <StrictMode>
+  <BrowserRouter>
+    <AvatarProvider>
+      <NameProvider>
+        <CategoryProvider>
+          <App />
+        </CategoryProvider>
+      </NameProvider>
+    </AvatarProvider>
+  </BrowserRouter>
+  // </StrictMode>
 );
