@@ -21,6 +21,7 @@ export default function Category() {
           id="category"
         >
           <option value="">--Please Select--</option>
+          <option value="cats">Cats</option>
           <option value="cars">Cars</option>
           <option value="boats">Boats</option>
           <option value="planes">Planes</option>
