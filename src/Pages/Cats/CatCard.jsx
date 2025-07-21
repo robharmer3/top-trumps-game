@@ -1,12 +1,11 @@
-import { getBreeds } from "../../endpoints";
-import useFetchApi from "../../endpoints Hook";
+import { getBreeds } from "../../../endpoints";
+import useFetchApi from "../../../endpoints Hook";
+import CatImage from "./CatImage";
 
 export default function CatCard() {
   const ranNum = Math.floor(Math.random() * 67);
 
   const { isLoading, isError, data } = useFetchApi(getBreeds);
-
-  console.log(data, "cats");
 
   if (isLoading) {
     return <p>...is Loading</p>;
@@ -21,6 +20,7 @@ export default function CatCard() {
       <>
         <div className="card">
           <h2>{data[ranNum].name}</h2>
+          <CatImage cat={data[ranNum]} />
           <p>Description:{data[ranNum].description}</p>
           <p>Origin: {data[ranNum].origin}</p>
           <p>Effection Level: {data[ranNum].affection_level}</p>

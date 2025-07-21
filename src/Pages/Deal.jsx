@@ -1,10 +1,9 @@
-import { useContext, useEffect, useState } from "react";
+import { useContext } from "react";
 import { NameContext } from "../Context/Name";
 import { AvatarContext } from "../Context/Avatar";
 import { CategoryContext } from "../Context/Category";
 import { useNavigate } from "react-router-dom";
-import { getBreeds, getSinglePokemon } from "../../endpoints";
-import Cats from "./AllCats";
+import AllCats from "./Cats/AllCats";
 
 export default function Deal() {
   const navigate = useNavigate();
@@ -18,27 +17,13 @@ export default function Deal() {
     navigate("/");
   }
 
-  // if (category === "pokemon") {
-  //   useEffect(() => {
-  //     getSinglePokemon(randomCard).then((data) => {
-  //       setCard1(data.species);
-  //     });
-  //   }, []);
-  // }
-
   return (
     <>
       <button onClick={handleHome}>Home</button>
       <h2>
         Welcome {name} {avatar}
       </h2>
-      {category === "cats" ? <Cats /> : null}
-      {/* <p>{card1.name}</p> */}
-      {/* <img src={card1.url} alt="" /> */}
-      {/* <p>Pokemon 2: {card1}</p> */}
-      {/* <p>Pokemon 3: {card1}</p> */}
-      {/* <p>Pokemon 4: {card1}</p> */}
-      {/* <p>Pokemon 5: {card1}</p> */}
+      {category === "cats" ? <AllCats /> : null}
     </>
   );
 }

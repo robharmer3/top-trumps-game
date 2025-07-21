@@ -21,9 +21,7 @@ export function getBreeds() {
 }
 
 export function getCatImg(id) {
-  console.log(id);
-  return catApi.get(`/images/search?breed_ids=${id.id}`).then(({ data }) => {
-    console.log(data);
+  return catApi.get(`/images/search?breed_ids=${id}`).then(({ data }) => {
     return data[0];
   });
 }
