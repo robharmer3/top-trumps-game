@@ -15,7 +15,7 @@ function App() {
     <AvatarProvider>
       <NameProvider>
         <CategoryProvider>
-          <h1>Witty Top Trumps Name</h1>
+          <h1>Cat Top Trumps</h1>
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/deal" element={<Deal />} />

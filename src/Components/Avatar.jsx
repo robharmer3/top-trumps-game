@@ -17,9 +17,9 @@ export default function Avatar() {
         </label>
         <select onChange={handleAvatar} name="category-dropdown" id="category">
           <option value="">--Please Select--</option>
-          <option value="*avatar-cat*">Cat</option>
-          <option value="*avatar-dog*">Dog</option>
-          <option value="*avatar-parrot*">Parrot</option>
+          <option value="🐯">Cat</option>
+          <option value="🐶">Dog</option>
+          <option value="🦜">Parrot</option>
         </select>
       </form>
     </>

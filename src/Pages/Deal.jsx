@@ -4,6 +4,7 @@ import { AvatarContext } from "../Context/Avatar";
 import { CategoryContext } from "../Context/Category";
 import { useNavigate } from "react-router-dom";
 import AllCats from "./Cats/AllCats";
+import AllPokemon from "./Pokemon/AllPokemon";
 
 export default function Deal() {
   const navigate = useNavigate();
@@ -23,7 +24,9 @@ export default function Deal() {
       <h2>
         Welcome {name} {avatar}
       </h2>
+      <p>Choose one RED stat from one card</p>
       {category === "cats" ? <AllCats /> : null}
+      {category === "pokemon" ? <AllPokemon /> : null}
     </>
   );
 }
