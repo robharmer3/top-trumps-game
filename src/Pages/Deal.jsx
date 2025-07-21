@@ -4,7 +4,7 @@ import { AvatarContext } from "../Context/Avatar";
 import { CategoryContext } from "../Context/Category";
 import { useNavigate } from "react-router-dom";
 import { getBreeds, getSinglePokemon } from "../../endpoints";
-import Cats from "./Cats";
+import Cats from "./AllCats";
 
 export default function Deal() {
   const navigate = useNavigate();

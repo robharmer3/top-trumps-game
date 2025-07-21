@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { getCatImg } from "../../endpoints";
 
-export default function CatImage(id) {
+export default function CatImage({ id }) {
   console.log(id, "Cat id");
   const [catImg, setCatImg] = useState();
 
